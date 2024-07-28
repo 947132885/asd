@@ -9,7 +9,7 @@ class Hero(SQLModel, table=True):
     secret_name: str
     age: int | None = Field(default=None, index=True)
 
-
+print(str(settings.SQLALCHEMY_DATABASE_URI))
 engine = create_engine(str(settings.SQLALCHEMY_DATABASE_URI))
 
 
@@ -27,7 +27,7 @@ def on_startup():
 
 @app.get("/")
 def hello():
-    return "Hello, Docker!"
+    return "Hello, Doc2123123er!"
 
 
 @app.post("/heroes/")
